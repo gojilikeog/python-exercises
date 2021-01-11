@@ -8,3 +8,5 @@ These exercises are published on practicepython.org.
 This will also serve as a reference point of developed skill. At the time of this edit, I am currently
 relearning Python after finishing a course in Java - Data Structures & Algorithms. We'll see where
 upon the next revision.
+
+Edit: What I'm failing to grasp is the ability to stack functions/methods into one line in Python. Where other programmers seem top do it so easily. With time.
