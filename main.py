@@ -186,3 +186,75 @@ def first_last(number_list):
 
 b = first_last(a)
 print(b)
+
+Exercise 13 - Fibonacci
+
+Write a program that asks how many Fibonnaci numbers to generate
+and then generates them. Use functions. Make sure to ask the user
+to enter the number of number in the sequence to generate.
+
+def fibonacci_generator(length):
+
+    if length <= 0:
+        return []
+    elif length == 1:
+        new_list = [0, 1]
+        return new_list
+    elif length == 2:
+        new_list = [0, 1, 1]
+        return new_list
+    else:
+        new_list = [0, 1, 1]
+
+    for x in range(2, length):
+        new_list.append((new_list[x] + new_list[x - 1]))
+
+    return new_list
+
+
+numbers = int(input("How many numbers for fibonacci?: "))
+numbers_result = fibonacci_generator(numbers)
+print(numbers_result)
+
+Exercise 14 - List Remove Duplicates
+
+Write a program(function!) that takes a list and returns a
+new list that contains all the elements of the first list
+minus all the duplicates
+
+Extras:
+- Write two different functions to do this - one using a loop
+  and constructing a list, and another using sets.
+- Go back and do Exercise 5 using sets, and write a solution
+  for that in a different function
+
+    
+def remove_duplicates(list_before):
+    return set(list_before)
+
+
+before_list = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
+after_list = remove_duplicates(before_list)
+print(after_list)
+
+Exercise 15
+Write a program(using functions!) that asks the user for a long
+string containing multiple words. Print back to the user the same
+string, except with the words in backward order.
+
+# Solution 1
+def reverse_string(words):
+    reverse = words.split()
+    reverse = reverse[::-1]
+    return " ".join(reverse)
+
+
+test_string = "Cracking The Code Interview"
+test_string = reverse_string(test_string)
+print(test_string)
+
+# Soltuon 2
+
+test_string = "Cracking The Code Interview"
+test_string = " ".join(test_string.split()[::-1])
+print(test_string)
